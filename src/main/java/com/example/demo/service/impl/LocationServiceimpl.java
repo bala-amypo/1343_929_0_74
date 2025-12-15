@@ -12,12 +12,14 @@ import com.example.demo.service.LocationService;
 public class LocationServiceimpl  implements LocationService{
     @Autowired
     LocationRepository locationRepository;
+    @Override
     public Location createLocation(Location location){
         if(location.getLatitude()>90){
             throw new IllegalArgumentException("latitude");
         }
         return locationRepository.save(location);
     }
+    @Override
     public List<Location> getAllLocation(){
         return locationRepository.findAll();
 

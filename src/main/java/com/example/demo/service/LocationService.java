@@ -1,6 +1,6 @@
 package com.example.demo.service;
 
-import org.hibernate.mapping.List;
+
 
 import com.example.demo.entity.Location;
 
