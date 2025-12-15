@@ -13,6 +13,9 @@ public class LocationServiceimpl  implements LocationService{
     @Autowired
     LocationRepository locationRepository;
     public Location createLocation(Location location){
+        if(location.getLatitude()>90){
+            throw new Ille
+        }
         return locationRepository.save(location);
     }
     public List<Location> getAllLocation(){
