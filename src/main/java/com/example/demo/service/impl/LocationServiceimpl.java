@@ -14,11 +14,12 @@ public class LocationServiceimpl  implements LocationService{
     LocationRepository locationRepository;
     public Location createLocation(Location location){
         if(location.getLatitude()>90){
-            throw new Ille
+            throw new IllegalArgumentException("latitude");
         }
         return locationRepository.save(location);
     }
     public List<Location> getAllLocation(){
+        return locationRepository.findAll();
 
     }
 }
