@@ -1,27 +1,27 @@
 package com.example.demo.service.impl;
 
-import org.hibernate.mapping.List;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.entity.Location;
 import com.example.demo.repository.LocationRepository;
 import com.example.demo.service.LocationService;
-
 @Service
-public class LocationServiceimpl  implements LocationService{
+public class LocationServiceImpl implements LocationService {
     @Autowired
-    LocationRepository locationRepository;
+    LocationRepository lrp;
     @Override
     public Location createLocation(Location location){
         if(location.getLatitude()>90){
             throw new IllegalArgumentException("latitude");
         }
-        return locationRepository.save(location);
+        return lrp.save(location);
     }
-    @Override
-    public List<Location> getAllLocation(){
-        return locationRepository.findAll();
 
+    @Override
+    public List<Location> getAllLocations(){
+        return lrp.findAll();
     }
 }
