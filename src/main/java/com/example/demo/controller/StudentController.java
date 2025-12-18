@@ -4,6 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.http.ResponseEntity;
 import com.example.demo.entity.Student;
 import com.example.demo.service.StudentService;
@@ -11,6 +13,7 @@ import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 
 @RestController
+@RequestMapping("/Studentsdata")
 public class StudentController {
     @Autowired
     StudentService studentService;
@@ -20,7 +23,10 @@ public class StudentController {
         return new  ResponseEntity<>(studentService.saveStudent(student),HttpStatus.CREATED);
     }
     
-    @Get
+    @GetMapping("/getdata/{id}")
+    public Student getdata(@PathVariable Long id){
+         return service.getStudentById(id);
+    }
     
 
 }
