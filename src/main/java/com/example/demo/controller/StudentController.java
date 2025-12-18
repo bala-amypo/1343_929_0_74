@@ -20,6 +20,7 @@ public class StudentController {
         return new  ResponseEntity<>(studentService.saveStudent(student),HttpStatus.CREATED);
     }
     
+    @Get
     
 
 }
