@@ -29,9 +29,10 @@ public class StudentServiceImple implements StudentService {
         // .orElseThrow(()-> new ResourceNotFoundException("Student not found"));
     }
 
-    public void deletdata(Long id){
+    public Student deletdata(Long id){
         Student student=getStudentById(id);
         studentRepository.delete(student);
+        return student;
     }
 
 }
