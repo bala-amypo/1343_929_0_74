@@ -6,7 +6,8 @@ import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Size;
 import jakarta.persistence.Column;
 @Entity
-// @Table(name = "students")
+@getter()
+@setter()
 public class Student {
 
     @Id
