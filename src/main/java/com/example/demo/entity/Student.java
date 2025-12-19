@@ -26,42 +26,42 @@ public class Student {
     // @Pattern(reg)
     // @Postive
 
-    public Long getId() {
-        return id;
-    }
+    // public Long getId() {
+    //     return id;
+    // }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+    // public void setId(Long id) {
+    //     this.id = id;
+    // }
 
-    public String getName() {
-        return name;
-    }
+    // public String getName() {
+    //     return name;
+    // }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    // public void setName(String name) {
+    //     this.name = name;
+    // }
 
-    public String getEmail() {
-        return email;
-    }
+    // public String getEmail() {
+    //     return email;
+    // }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+    // public void setEmail(String email) {
+    //     this.email = email;
+    // }
 
-    public Student(String name,String email) {
-        this.name = name;
-        this.email = email;
-    }
+    // public Student(String name,String email) {
+    //     this.name = name;
+    //     this.email = email;
+    // }
 
-    public Student() {
-    }
+    // public Student() {
+    // }
 
-    public Student orElseThrow(Object object) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'orElseThrow'");
-    }
+    // public Student orElseThrow(Object object) {
+    //     // TODO Auto-generated method stub
+    //     throw new UnsupportedOperationException("Unimplemented method 'orElseThrow'");
+    // }
     
 
     
