@@ -57,6 +57,11 @@ public class Student {
 
     public Student() {
     }
+
+    public Student orElseThrow(Object object) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'orElseThrow'");
+    }
     
 
     
