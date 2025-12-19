@@ -1,13 +1,16 @@
 package com.example.demo.entity;
 
 import jakarta.persistence.*;
+import lombok.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Size;
-import jakarta.persistence.Column;
 @Entity
-@getter()
-@setter()
+// @getter()
+// @setter()
+@Data()
+@NoArgsConstructor
+@AllArgsConstructor
 public class Student {
 
     @Id
