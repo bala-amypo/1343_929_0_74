@@ -3,17 +3,17 @@ package com.example.demo.Serviceimpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.demo.entity.Trans;
-import com.example.demo.repository.TransRepo;
-import com.example.demo.service.TransService;
+import com.example.demo.entity.Student;
+import com.example.demo.repository.StudentRepository;
+import com.example.demo.service.StudentService;
 import com.example.demo.exception.ResourceNotFoundException;
 
 @Service
 public class StudentServiceImple implements StudentService {
     @Autowired
-    TransRepo transRepo;
+    StudentRepository studentRepository;
 
-    public Trans saveTrans(Trans student){
+    public Student saveStudent(Student student){
         return studentRepository.save(student);
     }
     
